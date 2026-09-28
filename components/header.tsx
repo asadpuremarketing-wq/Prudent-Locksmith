@@ -187,6 +187,7 @@ function ServicesMenu({ active }: { active: boolean }) {
         type="button"
         aria-expanded={open}
         aria-controls="services-mega-menu"
+        aria-label="Services menu"
         onClick={() => setOpen((prev) => !prev)}
         className={clsx(
           'inline-flex min-h-[40px] items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-600',
@@ -323,12 +324,13 @@ function MobileMenu() {
         onClick={() => setOpen(true)}
         aria-expanded={open}
         aria-controls="mobile-menu-drawer"
+        aria-label="Open menu"
         className="inline-flex min-h-[40px] min-w-[40px] items-center justify-center rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-ink-950 shadow-sm hover:bg-slate-50 transition-all"
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
         </svg>
-        <span className="ml-2 hidden xs:inline">Menu</span>
+        <span className="ml-2 hidden xs:inline" aria-hidden="true">Menu</span>
       </button>
 
       {mounted && open
